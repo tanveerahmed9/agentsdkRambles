@@ -1,0 +1,15 @@
+# Build output
+bin/
+obj/
+
+# macOS
+.DS_Store
+
+# User-specific files
+*.user
+*.suo
+.vs/
+
+# NuGet
+*.nupkg
+packages/
