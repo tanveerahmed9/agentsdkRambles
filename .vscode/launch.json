@@ -30,5 +30,15 @@
         "AzureMonitor__ConnectionString": ""
       }
     }
+    ,{
+      "name": "03 - FullPipeline",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-fullpipeline",
+      "program": "${workspaceFolder}/src/03-FullPipeline/bin/Debug/net8.0/MAF.FullPipeline.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/03-FullPipeline",
+      "console": "integratedTerminal"
+    }
   ]
 }

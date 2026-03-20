@@ -15,5 +15,12 @@
       "args": [ "build", "${workspaceFolder}/src/02-AgentTelemetry/MAF.AgentTelemetry.csproj" ],
       "problemMatcher": "$msCompile"
     }
+    ,{
+      "label": "build-fullpipeline",
+      "command": "dotnet",
+      "type": "process",
+      "args": [ "build", "${workspaceFolder}/src/03-FullPipeline/MAF.FullPipeline.csproj" ],
+      "problemMatcher": "$msCompile"
+    }
   ]
 }
