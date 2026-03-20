@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build-basicagent",
+      "command": "dotnet",
+      "type": "process",
+      "args": [ "build", "${workspaceFolder}/src/01-BasicAgent/MAF.BasicAgent.csproj" ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "build-agenttelemetry",
+      "command": "dotnet",
+      "type": "process",
+      "args": [ "build", "${workspaceFolder}/src/02-AgentTelemetry/MAF.AgentTelemetry.csproj" ],
+      "problemMatcher": "$msCompile"
+    }
+  ]
+}

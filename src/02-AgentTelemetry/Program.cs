@@ -24,7 +24,12 @@ using OpenTelemetry;
 using OpenTelemetry.Trace;
 using OpenTelemetry.Metrics;
 
-// ── 1. Load config ────────────────────────────────────────────
+// ── 1. Load .env file into environment variables ─────────────
+//  Loads .env from the working directory if it exists.
+//  Safe to call even if the file is missing (optional: true).
+DotNetEnv.Env.TraversePath().Load();
+
+// ── 2. Load config ────────────────────────────────────────────
 IConfiguration config = new ConfigurationBuilder()
     .SetBasePath(AppContext.BaseDirectory)
     .AddJsonFile("appsettings.json", optional: true)

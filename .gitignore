@@ -13,3 +13,6 @@ obj/
 # NuGet
 *.nupkg
 packages/
+
+# Secrets
+.env
