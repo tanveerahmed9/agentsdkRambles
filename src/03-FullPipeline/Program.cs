@@ -23,7 +23,7 @@ using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
 
 // ── 1. Load .env ──────────────────────────────────────────────
-DotNetEnv.Env.TraversePath().Load();
+DotNetEnv.Env.Load(Path.Combine(AppContext.BaseDirectory, ".env"));
 
 // ── 2. Load config ────────────────────────────────────────────
 IConfiguration config = new ConfigurationBuilder()

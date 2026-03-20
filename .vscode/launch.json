@@ -31,6 +31,26 @@
       }
     }
     ,{
+      "name": "05 - RedisCacheAISearch",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-rediscacheaisearch",
+      "program": "${workspaceFolder}/src/05-RedisCacheAISearch/bin/Debug/net8.0/MAF.RedisCacheAISearch.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/05-RedisCacheAISearch",
+      "console": "integratedTerminal"
+    }
+    ,{
+      "name": "04 - SemanticCache",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-semanticcache",
+      "program": "${workspaceFolder}/src/04-SemanticCache/bin/Debug/net8.0/MAF.SemanticCache.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/04-SemanticCache",
+      "console": "integratedTerminal"
+    }
+    ,{
       "name": "03 - FullPipeline",
       "type": "coreclr",
       "request": "launch",

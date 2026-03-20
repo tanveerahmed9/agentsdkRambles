@@ -27,7 +27,7 @@ using OpenTelemetry.Metrics;
 // ── 1. Load .env file into environment variables ─────────────
 //  Loads .env from the working directory if it exists.
 //  Safe to call even if the file is missing (optional: true).
-DotNetEnv.Env.TraversePath().Load();
+DotNetEnv.Env.Load(Path.Combine(AppContext.BaseDirectory, ".env"));
 
 // ── 2. Load config ────────────────────────────────────────────
 IConfiguration config = new ConfigurationBuilder()

@@ -16,6 +16,20 @@
       "problemMatcher": "$msCompile"
     }
     ,{
+      "label": "build-rediscacheaisearch",
+      "command": "dotnet",
+      "type": "process",
+      "args": [ "build", "${workspaceFolder}/src/05-RedisCacheAISearch/MAF.RedisCacheAISearch.csproj" ],
+      "problemMatcher": "$msCompile"
+    }
+    ,{
+      "label": "build-semanticcache",
+      "command": "dotnet",
+      "type": "process",
+      "args": [ "build", "${workspaceFolder}/src/04-SemanticCache/MAF.SemanticCache.csproj" ],
+      "problemMatcher": "$msCompile"
+    }
+    ,{
       "label": "build-fullpipeline",
       "command": "dotnet",
       "type": "process",
