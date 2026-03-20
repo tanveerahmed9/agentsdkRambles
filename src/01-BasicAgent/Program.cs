@@ -50,7 +50,7 @@ ChatClientAgent agent = new ChatClientAgent(
     chatClient: chatClient,
     name: "BasicLearningAgent",
     instructions: "You are a helpful AI assistant. Answer clearly and concisely."
-)
+);
 
 // ── 4. Create a session ───────────────────────────────────────
 //  ChatClientAgentSession tracks conversation history
