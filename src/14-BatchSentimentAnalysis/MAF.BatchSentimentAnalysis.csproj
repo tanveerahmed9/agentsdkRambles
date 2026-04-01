@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!-- BatchClient / CreateBatchOperation are experimental in OpenAI SDK 2.x -->
+    <NoWarn>OPENAI001</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Azure OpenAI client — also pulls in OpenAI 2.8.0 (OpenAI.Batch, OpenAI.Files) -->
+    <PackageReference Include="Azure.AI.OpenAI" Version="2.8.0-beta.1" />
+    <!-- Explicit reference so OpenAI.* namespaces resolve without ambiguity -->
+    <PackageReference Include="OpenAI" Version="2.8.0" />
+    <!-- Config -->
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
+    <!-- .env file support -->
+    <PackageReference Include="DotNetEnv" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update=".env">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
